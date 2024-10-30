@@ -63,7 +63,7 @@ The application is configured through a `config.json` file in the root directory
         "backoff_multiplier": 2.0
     }
 }
-
+```
 
 ### Configuration Parameters
 
