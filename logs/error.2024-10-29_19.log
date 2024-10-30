@@ -1,0 +1,51 @@
+2024-10-29 19:28:54 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection lost: sleep interrupted
+2024-10-29 19:28:54 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection is not available
+2024-10-29 19:28:54 ERROR org.kreps.druidtoiotdb.Main - Application failed: 
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.<init>(SessionConnection.java:135)
+	at org.apache.iotdb.session.Session.constructSessionConnection(Session.java:599)
+	at org.apache.iotdb.session.Session.open(Session.java:557)
+	at org.apache.iotdb.session.pool.SessionPool.getSession(SessionPool.java:675)
+	at org.apache.iotdb.session.pool.SessionPool.showAllTemplates(SessionPool.java:2764)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.createTemplateIfNotExists(SchemaValidator.java:45)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.initializeSchema(SchemaValidator.java:39)
+	at org.kreps.druidtoiotdb.Main.validateSchema(Main.java:72)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:56)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+2024-10-29 19:30:27 ERROR o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 Client error - skipping tag 63BN TS WP67: Client error: HTTP 400: BAD REQUEST. Request URL: http://127.0.0.1:20802/api/data/current.do?stime=2024-01-01 00:10:00&etime=2024-01-01 00:11:40&tags=63BN TS WP67&PWCM_CD=ST&USER_KEY=your_user_key
+2024-10-29 19:30:29 ERROR o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 Client error - skipping tag 52KL PQ RT23: Client error: HTTP 400: BAD REQUEST. Request URL: http://127.0.0.1:20802/api/data/current.do?stime=2024-01-01 00:25:00&etime=2024-01-01 00:26:40&tags=52KL PQ RT23&PWCM_CD=ST&USER_KEY=your_user_key
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 77033ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76972ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 77033ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76972ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76984ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76987ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76995ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76999ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Error processing batch: Queue full
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection lost: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection is not available
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 79138ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 79140ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:32:09 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 25128ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 25128ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:32:09 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection is not available

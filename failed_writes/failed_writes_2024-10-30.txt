@@ -1,0 +1,33 @@
+43TY UW MN47|2023-12-31 16:28:31|2023-12-31 16:29:41|root.cepco.`STHDHD09`.`43TY UW MN47`|10|timeout to get a connection from 192.168.45.76:6667
+43TY UW MN47|2023-12-31 16:26:42|2023-12-31 16:28:14|root.cepco.`STHDTR02`.`43TY UW MN47`|9|timeout to get a connection from 192.168.45.76:6667
+74SD FG HJ15|2023-12-31 15:57:00|2023-12-31 15:57:50|root.cepco.`STHDTR02`.`74SD FG HJ15`|5|timeout to get a connection from 192.168.45.76:6667
+35XC VB NM03|2023-12-31 15:03:27|2023-12-31 15:04:56|root.cepco.`STHDPW01`.`35XC VB NM03`|10|timeout to get a connection from 192.168.45.76:6667
+57FG HJ KL25|2023-12-31 15:46:45|2023-12-31 15:47:43|root.cepco.`STHDHD08`.`57FG HJ KL25`|6|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:20:04|2023-12-31 16:20:20|root.cepco.`STHDPW01`.`28LK JH TY37`|3|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:21:29|2023-12-31 16:21:36|root.cepco.`STHDPW01`.`28LK JH TY37`|2|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:21:41|2023-12-31 16:22:16|root.cepco.`STHDPW01`.`28LK JH TY37`|3|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:22:30|2023-12-31 16:23:18|root.cepco.`STHDPW01`.`28LK JH TY37`|4|IoTDB connection is not available
+57FG HJ KL25|2023-12-31 15:51:56|2023-12-31 15:52:58|root.cepco.`STHDHD08`.`57FG HJ KL25`|8|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:23:23|2023-12-31 16:24:06|root.cepco.`STHDPW01`.`28LK JH TY37`|10|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:24:26|2023-12-31 16:24:43|root.cepco.`STHDPW01`.`28LK JH TY37`|3|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:25:15|2023-12-31 16:26:39|root.cepco.`STHDPW01`.`28LK JH TY37`|8|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:51:00|2023-12-31 20:51:33|root.cepco.`STHDGE02`.`76HJ KN BV78`|4|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:27:59|2023-12-31 16:28:16|root.cepco.`STHDPW01`.`28LK JH TY37`|2|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:28:30|2023-12-31 16:29:54|root.cepco.`STHDPW01`.`28LK JH TY37`|6|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:30:05|2023-12-31 16:30:52|root.cepco.`STHDPW01`.`28LK JH TY37`|9|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:30:55|2023-12-31 16:31:14|root.cepco.`STHDPW01`.`28LK JH TY37`|5|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:31:54|2023-12-31 16:33:12|root.cepco.`STHDPW01`.`28LK JH TY37`|6|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:55:50|2023-12-31 20:56:29|root.cepco.`STHDGE02`.`76HJ KN BV78`|5|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:36:00|2023-12-31 16:36:26|root.cepco.`STHDPW01`.`28LK JH TY37`|5|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:57:16|2023-12-31 20:58:00|root.cepco.`STHDGE02`.`76HJ KN BV78`|6|IoTDB connection is not available
+28LK JH TY37|2023-12-31 16:37:55|2023-12-31 16:38:14|root.cepco.`STHDPW01`.`28LK JH TY37`|3|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:52:48|2023-12-31 20:52:48|root.cepco.`STHDGE02`.`76HJ KN BV78`|1|Fail to reconnect to server. Please check server status.192.168.45.76:6667
+76HJ KN BV78|2023-12-31 20:51:40|2023-12-31 20:53:11|root.cepco.`STHDGE02`.`76HJ KN BV78`|11|Fail to reconnect to server. Please check server status.192.168.45.76:6667
+52KL PQ RT23|2023-12-31 19:18:39|2023-12-31 19:19:50|root.cepco.`STHDHD07`.`52KL PQ RT23`|7|Fail to reconnect to server. Please check server status.192.168.45.76:6667
+76HJ KN BV78|2023-12-31 20:53:33|2023-12-31 20:54:55|root.cepco.`STHDGE02`.`76HJ KN BV78`|11|IoTDB connection is not available
+19NM QW CF90|2023-12-31 20:57:15|2023-12-31 20:57:35|root.cepco.`STHDHD09`.`19NM QW CF90`|6|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:55:11|2023-12-31 20:56:28|root.cepco.`STHDGE02`.`76HJ KN BV78`|8|IoTDB connection is not available
+19NM QW CF90|2023-12-31 20:58:22|2023-12-31 20:59:13|root.cepco.`STHDHD09`.`19NM QW CF90`|5|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:56:44|2023-12-31 20:57:46|root.cepco.`STHDGE02`.`76HJ KN BV78`|7|IoTDB connection is not available
+76HJ KN BV78|2023-12-31 20:58:23|2023-12-31 20:59:55|root.cepco.`STHDGE02`.`76HJ KN BV78`|9|IoTDB connection is not available
+52KL P RT23|2023-12-31 19:26:45|2023-12-31 19:28:02|root.cepco.`STHDHD07`.`52KL PQ RT23`|12|IoTDB cQonnection is not available

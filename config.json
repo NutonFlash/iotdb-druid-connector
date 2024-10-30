@@ -1,0 +1,39 @@
+{
+    "source": {
+        "druid": {
+            "api_url": "http://127.0.0.1:20802/api/data/current.do",
+            "user_key": "your_user_key"
+        },
+        "time_range": {
+            "start": "2024-01-01T00:00:00",
+            "end": "2024-01-01T06:00:00"
+        },
+        "tags_file": "tagList.csv"
+    },
+    "destination": {
+        "iotdb": {
+            "host": "192.168.45.76",
+            "port": 6667,
+            "username": "root",
+            "password": "root",
+            "session_pool_size": 10
+        }
+    },
+    "processing": {
+        "threads": {
+            "reader_pool_size": 10,
+            "writer_pool_size": 5
+        },
+        "batch": {
+            "read_size": 100,
+            "write_size": 500
+        },
+        "queue_size": 10000
+    },
+    "retry": {
+        "initial_delay_ms": 1000,
+        "max_delay_ms": 60000,
+        "max_attempts": 5,
+        "backoff_multiplier": 2.0
+    }
+}

@@ -1,0 +1,760 @@
+2024-10-29 19:28:52 INFO  o.k.druidtoiotdb.config.ConfigLoader - Loading tags from CSV file: tagList.csv
+2024-10-29 19:28:52 INFO  o.k.druidtoiotdb.config.TagCsvParser - Successfully parsed 25 tags from the CSV file.
+2024-10-29 19:28:52 INFO  o.k.druidtoiotdb.config.TagCsvParser - Total number of parsed tags: 25
+2024-10-29 19:28:52 INFO  o.k.druidtoiotdb.config.TagCsvParser - First 5 tags: 47DH MW XQ01, 52KL PQ RT23, 89JF NM LK45, 63BN TS WP67, 71VG HC YU89
+2024-10-29 19:28:52 INFO  o.k.druidtoiotdb.config.TagCsvParser - Last 5 tags: 46AS DF GH93, 83JK LM NB05, 59PO IU YT27, 72WQ ER TY49, 15XZ CV BN61
+2024-10-29 19:28:52 INFO  o.k.d.iotdb.IoTDBSessionPool - Initializing IoTDB SessionPool with pool size: 10
+2024-10-29 19:28:52 INFO  o.k.d.iotdb.IoTDBSessionPool - IoTDB SessionPool initialized successfully
+2024-10-29 19:28:52 INFO  org.kreps.druidtoiotdb.Main - Validating IoTDB schema...
+2024-10-29 19:28:52 INFO  o.k.d.validator.SchemaValidator - Checking if template exists: druid_t
+2024-10-29 19:28:54 INFO  o.k.d.threading.ThreadPoolManager - Shutting down thread pools...
+2024-10-29 19:28:54 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 1/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:28:54 INFO  o.k.d.threading.ThreadPoolManager - Thread pools shutdown completed
+2024-10-29 19:28:54 INFO  o.k.d.iotdb.IoTDBSessionPool - Closing IoTDB SessionPool
+2024-10-29 19:28:54 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection lost: sleep interrupted
+2024-10-29 19:28:54 INFO  o.a.iotdb.session.pool.SessionPool - closing the session pool, cleaning queues...
+2024-10-29 19:28:54 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection is not available
+2024-10-29 19:28:54 INFO  o.k.d.iotdb.IoTDBSessionPool - IoTDB SessionPool closed successfully
+2024-10-29 19:28:54 INFO  org.kreps.druidtoiotdb.Main - Application completed successfully
+2024-10-29 19:28:54 ERROR org.kreps.druidtoiotdb.Main - Application failed: 
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.<init>(SessionConnection.java:135)
+	at org.apache.iotdb.session.Session.constructSessionConnection(Session.java:599)
+	at org.apache.iotdb.session.Session.open(Session.java:557)
+	at org.apache.iotdb.session.pool.SessionPool.getSession(SessionPool.java:675)
+	at org.apache.iotdb.session.pool.SessionPool.showAllTemplates(SessionPool.java:2764)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.createTemplateIfNotExists(SchemaValidator.java:45)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.initializeSchema(SchemaValidator.java:39)
+	at org.kreps.druidtoiotdb.Main.validateSchema(Main.java:72)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:56)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+2024-10-29 19:30:22 INFO  o.k.druidtoiotdb.config.ConfigLoader - Loading tags from CSV file: tagList.csv
+2024-10-29 19:30:22 INFO  o.k.druidtoiotdb.config.TagCsvParser - Successfully parsed 25 tags from the CSV file.
+2024-10-29 19:30:22 INFO  o.k.druidtoiotdb.config.TagCsvParser - Total number of parsed tags: 25
+2024-10-29 19:30:22 INFO  o.k.druidtoiotdb.config.TagCsvParser - First 5 tags: 47DH MW XQ01, 52KL PQ RT23, 89JF NM LK45, 63BN TS WP67, 71VG HC YU89
+2024-10-29 19:30:22 INFO  o.k.druidtoiotdb.config.TagCsvParser - Last 5 tags: 46AS DF GH93, 83JK LM NB05, 59PO IU YT27, 72WQ ER TY49, 15XZ CV BN61
+2024-10-29 19:30:22 INFO  o.k.d.iotdb.IoTDBSessionPool - Initializing IoTDB SessionPool with pool size: 10
+2024-10-29 19:30:23 INFO  o.k.d.iotdb.IoTDBSessionPool - IoTDB SessionPool initialized successfully
+2024-10-29 19:30:23 INFO  org.kreps.druidtoiotdb.Main - Validating IoTDB schema...
+2024-10-29 19:30:23 INFO  o.k.d.validator.SchemaValidator - Checking if template exists: druid_t
+2024-10-29 19:30:23 INFO  o.k.d.validator.SchemaValidator - Ensuring root database exists: root.cepco
+2024-10-29 19:30:23 INFO  org.kreps.druidtoiotdb.Main - Schema validation completed
+2024-10-29 19:30:23 INFO  o.k.d.worker.WorkerManager - Starting 5 writer threads...
+2024-10-29 19:30:23 INFO  o.k.d.worker.WorkerManager - Starting 10 fetcher threads...
+2024-10-29 19:30:23 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 started
+2024-10-29 19:30:23 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 started
+2024-10-29 19:30:23 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 started
+2024-10-29 19:30:23 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 started
+2024-10-29 19:30:23 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 started
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-1 assigned 3 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-2 assigned 3 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-3 assigned 3 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-4 assigned 3 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-5 assigned 3 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-6 assigned 2 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-7 assigned 2 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-8 assigned 2 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-9 assigned 2 tags
+2024-10-29 19:30:23 INFO  o.k.d.worker.TagDistributor - Fetcher-10 assigned 2 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 started with 3 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 started with 3 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 started with 3 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 started with 3 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 started with 3 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 started with 2 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 started with 2 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 started with 2 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 started with 2 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.d.threading.ThreadPoolManager - Waiting for fetchers to complete...
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 started with 2 tags
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 created 216 time intervals
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:00 - 2024-01-01T00:01:40]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:26 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:01:40 - 2024-01-01T00:03:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:03:20 - 2024-01-01T00:05]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 DEBUG o.k.d.validator.SchemaValidator - Validating schema for 98 new devices
+2024-10-29 19:30:27 DEBUG o.k.d.validator.SchemaValidator - Validating schema for 99 new devices
+2024-10-29 19:30:27 DEBUG o.k.d.validator.SchemaValidator - Validating schema for 99 new devices
+2024-10-29 19:30:27 DEBUG o.k.d.validator.SchemaValidator - Validating schema for 100 new devices
+2024-10-29 19:30:27 DEBUG o.k.d.validator.SchemaValidator - Validating schema for 100 new devices
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 WARN  o.k.druidtoiotdb.utils.RetryUtils - Fetch data for tag 76HJ KN BV78 failed (attempt 1/5). Error: HTTP 500: INTERNAL SERVER ERROR
+2024-10-29 19:30:27 WARN  o.k.druidtoiotdb.utils.RetryUtils - Fetch data for tag 19NM QW CF90 failed (attempt 1/5). Error: HTTP 500: INTERNAL SERVER ERROR
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:27 ERROR o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 Client error - skipping tag 63BN TS WP67: Client error: HTTP 400: BAD REQUEST. Request URL: http://127.0.0.1:20802/api/data/current.do?stime=2024-01-01 00:10:00&etime=2024-01-01 00:11:40&tags=63BN TS WP67&PWCM_CD=ST&USER_KEY=your_user_key
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:27 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 processed 100 points for tag 71VG HC YU89 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 WARN  o.k.druidtoiotdb.utils.RetryUtils - Fetch data for tag 71VG HC YU89 failed (attempt 1/5). Error: HTTP 500: INTERNAL SERVER ERROR
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:15 - 2024-01-01T00:16:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:05 - 2024-01-01T00:06:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:16:40 - 2024-01-01T00:18:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:06:40 - 2024-01-01T00:08:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:18:20 - 2024-01-01T00:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:08:20 - 2024-01-01T00:10]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:20 - 2024-01-01T00:21:40]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:28 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 processed 100 points for tag 63BN TS WP67 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 processed 100 points for tag 19NM QW CF90 in interval [2024-01-01T00:10 - 2024-01-01T00:11:40]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 processed 100 points for tag 38CM LR EW34 in interval [2024-01-01T00:21:40 - 2024-01-01T00:23:20]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 processed 100 points for tag 95ZX FD AQ12 in interval [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 processed 100 points for tag 47DH MW XQ01 in interval [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 processed 100 points for tag 89JF NM LK45 in interval [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 processed 100 points for tag 52KL PQ RT23 in interval [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 processed 100 points for tag 24DP GS TY56 in interval [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:29 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 processed 100 points for tag 76HJ KN BV78 in interval [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:29 ERROR o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 Client error - skipping tag 52KL PQ RT23: Client error: HTTP 400: BAD REQUEST. Request URL: http://127.0.0.1:20802/api/data/current.do?stime=2024-01-01 00:25:00&etime=2024-01-01 00:26:40&tags=52KL PQ RT23&PWCM_CD=ST&USER_KEY=your_user_key
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 queue is full (size: 10000), waiting before retry. Tag: 19NM QW CF90, Interval: [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 queue is full (size: 10000), waiting before retry. Tag: 63BN TS WP67, Interval: [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 queue is full (size: 10000), waiting before retry. Tag: 38CM LR EW34, Interval: [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 queue is full (size: 10000), waiting before retry. Tag: 95ZX FD AQ12, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 queue is full (size: 10000), waiting before retry. Tag: 47DH MW XQ01, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 queue is full (size: 10000), waiting before retry. Tag: 89JF NM LK45, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 queue is full (size: 10000), waiting before retry. Tag: 24DP GS TY56, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 queue is full (size: 10000), waiting before retry. Tag: 71VG HC YU89, Interval: [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 queue is full (size: 10000), waiting before retry. Tag: 76HJ KN BV78, Interval: [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:30:59 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 queue is full (size: 10000), waiting before retry. Tag: 52KL PQ RT23, Interval: [2024-01-01T00:26:40 - 2024-01-01T00:28:20]
+2024-10-29 19:31:12 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 1/5). Error: 708: null
+2024-10-29 19:31:12 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 1/5). Error: 708: null
+2024-10-29 19:31:12 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 1/5). Error: 708: null
+2024-10-29 19:31:12 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 1/5). Error: 708: null
+2024-10-29 19:31:12 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 1/5). Error: 708: null
+2024-10-29 19:31:14 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 1/5). Error: 305: net.sf.cglib.core.CodeGenerationException: org.apache.thrift.TException-->Fail to connect to any config node. Please check status of ConfigNodes or logs of connected DataNode
+2024-10-29 19:31:15 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:15 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:15 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:15 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:17 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:17 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:17 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:18 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:18 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - setSchemaTemplate [druid_t] on [root.cepco.`STHDHD07`.`52KL PQ RT23`] failed
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.setSchemaTemplate(SessionConnection.java:1514)
+	at org.apache.iotdb.session.Session.setSchemaTemplate(Session.java:3324)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2848)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - setSchemaTemplate [druid_t] on [root.cepco.`STHDGE02`.`76HJ KN BV78`] failed
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.setSchemaTemplate(SessionConnection.java:1514)
+	at org.apache.iotdb.session.Session.setSchemaTemplate(Session.java:3324)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2848)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.closeSession(SessionPool.java:803)
+	at org.apache.iotdb.session.pool.SessionPool.cleanSessionAndMayThrowConnectionException(SessionPool.java:813)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2854)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.thrift.transport.TTransportException: Cannot write to null outputStream
+	at org.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:191)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.flush(TElasticFramedTransport.java:144)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:73)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:62)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.send_closeSession(IClientRPCService.java:533)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:525)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 14 common frames omitted
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - setSchemaTemplate [druid_t] on [root.cepco.`STHDGE02`.`76HJ KN BV78`] failed
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.setSchemaTemplate(SessionConnection.java:1514)
+	at org.apache.iotdb.session.Session.setSchemaTemplate(Session.java:3324)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2848)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - setSchemaTemplate [druid_t] on [root.cepco.`STHDGE02`.`76HJ KN BV78`] failed
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.setSchemaTemplate(SessionConnection.java:1514)
+	at org.apache.iotdb.session.Session.setSchemaTemplate(Session.java:3324)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2848)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.closeSession(SessionPool.java:803)
+	at org.apache.iotdb.session.pool.SessionPool.cleanSessionAndMayThrowConnectionException(SessionPool.java:813)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2854)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.thrift.transport.TTransportException: Cannot write to null outputStream
+	at org.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:191)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.flush(TElasticFramedTransport.java:144)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:73)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:62)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.send_closeSession(IClientRPCService.java:533)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:525)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 14 common frames omitted
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.closeSession(SessionPool.java:803)
+	at org.apache.iotdb.session.pool.SessionPool.cleanSessionAndMayThrowConnectionException(SessionPool.java:813)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2854)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.thrift.transport.TTransportException: Cannot write to null outputStream
+	at org.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:191)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.flush(TElasticFramedTransport.java:144)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:73)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:62)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.send_closeSession(IClientRPCService.java:533)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:525)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 14 common frames omitted
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.closeSession(SessionPool.java:803)
+	at org.apache.iotdb.session.pool.SessionPool.cleanSessionAndMayThrowConnectionException(SessionPool.java:813)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2854)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.thrift.transport.TTransportException: Cannot write to null outputStream
+	at org.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:191)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.flush(TElasticFramedTransport.java:144)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:73)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:62)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.send_closeSession(IClientRPCService.java:533)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:525)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 14 common frames omitted
+2024-10-29 19:31:20 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:22 WARN  o.a.iotdb.session.SessionConnection - The current node may have been down TEndPoint(ip:192.168.45.76, port:6667), try next node
+2024-10-29 19:31:22 WARN  o.a.iotdb.session.pool.SessionPool - setSchemaTemplate [druid_t] on [root.cepco.`STHDHD07`.`52KL PQ RT23`] failed
+org.apache.iotdb.rpc.IoTDBConnectionException: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+	at org.apache.iotdb.session.SessionConnection.setSchemaTemplate(SessionConnection.java:1514)
+	at org.apache.iotdb.session.Session.setSchemaTemplate(Session.java:3324)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2848)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-29 19:31:22 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.closeSession(SessionPool.java:803)
+	at org.apache.iotdb.session.pool.SessionPool.cleanSessionAndMayThrowConnectionException(SessionPool.java:813)
+	at org.apache.iotdb.session.pool.SessionPool.setSchemaTemplate(SessionPool.java:2854)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.lambda$2(SchemaValidator.java:145)
+	at org.kreps.druidtoiotdb.utils.RetryUtils.executeWithRetry(RetryUtils.java:24)
+	at org.kreps.druidtoiotdb.validator.SchemaValidator.validateDataPoints(SchemaValidator.java:142)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.processData(IoTDBWriter.java:99)
+	at org.kreps.druidtoiotdb.writer.IoTDBWriter.run(IoTDBWriter.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.thrift.transport.TTransportException: Cannot write to null outputStream
+	at org.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:191)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.flush(TElasticFramedTransport.java:144)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:73)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:62)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.send_closeSession(IClientRPCService.java:533)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:525)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 14 common frames omitted
+2024-10-29 19:31:24 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:24 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:24 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:24 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:26 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:26 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:28 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:28 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:28 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:28 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:30 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:30 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 queue is full (size: 10000), waiting before retry. Tag: 63BN TS WP67, Interval: [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 queue is full (size: 10000), waiting before retry. Tag: 19NM QW CF90, Interval: [2024-01-01T00:11:40 - 2024-01-01T00:13:20]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 queue is full (size: 10000), waiting before retry. Tag: 38CM LR EW34, Interval: [2024-01-01T00:23:20 - 2024-01-01T00:25]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 queue is full (size: 10000), waiting before retry. Tag: 47DH MW XQ01, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 queue is full (size: 10000), waiting before retry. Tag: 95ZX FD AQ12, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 queue is full (size: 10000), waiting before retry. Tag: 89JF NM LK45, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 queue is full (size: 10000), waiting before retry. Tag: 24DP GS TY56, Interval: [2024-01-01T00:25 - 2024-01-01T00:26:40]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 queue is full (size: 10000), waiting before retry. Tag: 71VG HC YU89, Interval: [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 queue is full (size: 10000), waiting before retry. Tag: 76HJ KN BV78, Interval: [2024-01-01T00:13:20 - 2024-01-01T00:15]
+2024-10-29 19:31:34 WARN  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 queue is full (size: 10000), waiting before retry. Tag: 52KL PQ RT23, Interval: [2024-01-01T00:26:40 - 2024-01-01T00:28:20]
+2024-10-29 19:31:36 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:36 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 77033ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76972ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 77033ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76972ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76984ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Attempting to requeue current batch
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 Attempting to requeue current batch
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76987ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Initiating graceful shutdown...
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76995ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Stopping 10 fetchers...
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 stopped and latch decremented, count: 9
+2024-10-29 19:31:44 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 76999ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 Attempting to requeue current batch
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 stopped and latch decremented, count: 8
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 stopping due to running flag
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 stopped and latch decremented, count: 7
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 stopping due to running flag
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-1 fetcherCompletionLatch decremented, count: 6
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 stopped and latch decremented, count: 5
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-2 fetcherCompletionLatch decremented, count: 4
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 Attempting to requeue current batch
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 stopped and latch decremented, count: 3
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-3 fetcherCompletionLatch decremented, count: 2
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 stopped and latch decremented, count: 1
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-4 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.d.threading.ThreadPoolManager - All fetchers completed
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Sending poison pills to writers...
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 stopped and latch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-5 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 stopped and latch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-6 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 stopped and latch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-7 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 stopped and latch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-8 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Sending poison pills to 5 writers...
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 stopping due to running flag
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-9 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Error processing batch: Queue full
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.fetcher.DataFetcher - Fetcher-10 fetcherCompletionLatch decremented, count: 0
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Shutdown already in progress
+2024-10-29 19:31:44 INFO  o.k.d.threading.ThreadPoolManager - Waiting for writers to complete...
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-3 completed, latch count: 4
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Shutdown already in progress
+2024-10-29 19:31:44 DEBUG o.k.d.validator.SchemaValidator - Validating schema for 46 new devices
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-2 completed, latch count: 3
+2024-10-29 19:31:44 INFO  o.k.d.worker.WorkerManager - Shutdown already in progress
+2024-10-29 19:31:44 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-5 completed, latch count: 2
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection lost: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection is not available
+2024-10-29 19:31:46 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 1/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 79138ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 79140ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:46 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:31:46 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 Attempting to requeue current batch
+2024-10-29 19:31:46 INFO  o.k.d.worker.WorkerManager - Shutdown already in progress
+2024-10-29 19:31:46 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-1 completed, latch count: 1
+2024-10-29 19:31:49 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:53 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 1/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:53 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:56 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 2/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:31:59 WARN  o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:00 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 3/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:06 WARN  o.k.druidtoiotdb.utils.RetryUtils - IoTDB connection check failed (attempt 4/5). Error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.druidtoiotdb.utils.RetryUtils - Schema validation failed after 5 attempts. Final error: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 25128ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.d.validator.SchemaValidator - Schema validation failed after 25128ms: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Schema validation failed: Fail to reconnect to server. Please check server status.192.168.45.76:6667
+2024-10-29 19:32:09 ERROR o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Critical error encountered: Fail to reconnect to server. Please check server status.192.168.45.76:6667. Initiating shutdown...
+2024-10-29 19:32:09 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 Attempting to requeue current batch
+2024-10-29 19:32:09 INFO  o.k.d.worker.WorkerManager - Shutdown already in progress
+2024-10-29 19:32:09 INFO  o.k.druidtoiotdb.writer.IoTDBWriter - Writer-4 completed, latch count: 0
+2024-10-29 19:32:09 INFO  o.k.d.threading.ThreadPoolManager - All writers completed
+2024-10-29 19:32:09 INFO  o.k.d.threading.ThreadPoolManager - Shutting down thread pools...
+2024-10-29 19:32:09 INFO  o.k.d.threading.ThreadPoolManager - Thread pools shutdown completed
+2024-10-29 19:32:09 INFO  o.k.d.iotdb.IoTDBSessionPool - Closing IoTDB SessionPool
+2024-10-29 19:32:09 ERROR o.k.d.iotdb.IoTDBSessionPool - IoTDB connection is not available
+2024-10-29 19:32:09 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.close(SessionPool.java:740)
+	at org.kreps.druidtoiotdb.iotdb.IoTDBSessionPool.close(IoTDBSessionPool.java:102)
+	at org.kreps.druidtoiotdb.Main.cleanup(Main.java:78)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:62)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+Caused by: org.apache.thrift.transport.TTransportException: java.net.SocketException: An established connection was aborted by the software in your host machine
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:178)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.readFrame(TElasticFramedTransport.java:122)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.read(TElasticFramedTransport.java:117)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:463)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:361)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:244)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:77)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.recv_closeSession(IClientRPCService.java:539)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:526)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 6 common frames omitted
+Caused by: java.net.SocketException: An established connection was aborted by the software in your host machine
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+	at java.base/sun.nio.ch.NioSocketImpl.tryRead(NioSocketImpl.java:256)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:307)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:347)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:176)
+	... 21 common frames omitted
+2024-10-29 19:32:09 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.close(SessionPool.java:740)
+	at org.kreps.druidtoiotdb.iotdb.IoTDBSessionPool.close(IoTDBSessionPool.java:102)
+	at org.kreps.druidtoiotdb.Main.cleanup(Main.java:78)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:62)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+Caused by: org.apache.thrift.transport.TTransportException: Socket is closed by peer.
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:181)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.readFrame(TElasticFramedTransport.java:122)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.read(TElasticFramedTransport.java:117)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:463)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:361)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:244)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:77)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.recv_closeSession(IClientRPCService.java:539)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:526)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 6 common frames omitted
+2024-10-29 19:32:09 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.close(SessionPool.java:740)
+	at org.kreps.druidtoiotdb.iotdb.IoTDBSessionPool.close(IoTDBSessionPool.java:102)
+	at org.kreps.druidtoiotdb.Main.cleanup(Main.java:78)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:62)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+Caused by: org.apache.thrift.transport.TTransportException: Socket is closed by peer.
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:181)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.readFrame(TElasticFramedTransport.java:122)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.read(TElasticFramedTransport.java:117)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:463)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:361)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:244)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:77)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.recv_closeSession(IClientRPCService.java:539)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:526)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 6 common frames omitted
+2024-10-29 19:32:09 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.close(SessionPool.java:740)
+	at org.kreps.druidtoiotdb.iotdb.IoTDBSessionPool.close(IoTDBSessionPool.java:102)
+	at org.kreps.druidtoiotdb.Main.cleanup(Main.java:78)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:62)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+Caused by: org.apache.thrift.transport.TTransportException: Socket is closed by peer.
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:181)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.readFrame(TElasticFramedTransport.java:122)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.read(TElasticFramedTransport.java:117)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:463)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:361)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:244)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:77)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.recv_closeSession(IClientRPCService.java:539)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:526)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 6 common frames omitted
+2024-10-29 19:32:09 WARN  o.a.iotdb.session.pool.SessionPool - close the session failed.
+org.apache.iotdb.rpc.IoTDBConnectionException: Error occurs when closing session at server. Maybe server is down.
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:249)
+	at org.apache.iotdb.session.Session.close(Session.java:575)
+	at org.apache.iotdb.session.pool.SessionPool.close(SessionPool.java:740)
+	at org.kreps.druidtoiotdb.iotdb.IoTDBSessionPool.close(IoTDBSessionPool.java:102)
+	at org.kreps.druidtoiotdb.Main.cleanup(Main.java:78)
+	at org.kreps.druidtoiotdb.Main.run(Main.java:62)
+	at org.kreps.druidtoiotdb.Main.main(Main.java:44)
+Caused by: org.apache.thrift.transport.TTransportException: Socket is closed by peer.
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:181)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.readFrame(TElasticFramedTransport.java:122)
+	at org.apache.iotdb.rpc.TElasticFramedTransport.read(TElasticFramedTransport.java:117)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:109)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:463)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:361)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:244)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:77)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.recv_closeSession(IClientRPCService.java:539)
+	at org.apache.iotdb.service.rpc.thrift.IClientRPCService$Client.closeSession(IClientRPCService.java:526)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.iotdb.rpc.SynchronizedHandler.invoke(SynchronizedHandler.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.closeSession(Unknown Source)
+	at org.apache.iotdb.session.SessionConnection.close(SessionConnection.java:247)
+	... 6 common frames omitted
+2024-10-29 19:32:09 INFO  o.a.iotdb.session.pool.SessionPool - closing the session pool, cleaning queues...
+2024-10-29 19:32:09 INFO  o.k.d.iotdb.IoTDBSessionPool - IoTDB SessionPool closed successfully
+2024-10-29 19:32:09 INFO  org.kreps.druidtoiotdb.Main - Application completed successfully

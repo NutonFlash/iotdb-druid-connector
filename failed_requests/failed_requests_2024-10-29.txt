@@ -1,0 +1,2 @@
+63BN TS WP67|2024-01-01 00:10:00|2024-01-01 00:11:40|400|Client error: HTTP 400: BAD REQUEST. Request URL: http://127.0.0.1:20802/api/data/current.do?stime=2024-01-01 00:10:00&etime=2024-01-01 00:11:40&tags=63BN TS WP67&PWCM_CD=ST&USER_KEY=your_user_key
+52KL PQ RT23|2024-01-01 00:25:00|2024-01-01 00:26:40|400|Client error: HTTP 400: BAD REQUEST. Request URL: http://127.0.0.1:20802/api/data/current.do?stime=2024-01-01 00:25:00&etime=2024-01-01 00:26:40&tags=52KL PQ RT23&PWCM_CD=ST&USER_KEY=your_user_key
